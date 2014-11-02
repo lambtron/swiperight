@@ -15,6 +15,6 @@
   "private": true,
   "dependencies": {
     "cron": "^1.0.5",
-    "tinderjs": "^1.0.8"
+    "tinderjs-x": "^1.0.8"
   }
 }
