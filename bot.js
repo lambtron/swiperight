@@ -16,14 +16,13 @@ var LIKEINTERVAL_STD = 0.7;
 tinder.setAuthToken(authToken);
 
 
-// session variables.
-var startTime = Date.now();
-var sessionLength = 10;
-
-
-
-// declare start session function
-function startSession(cb) {
+/**
+ * starts the liking bonanza
+ *
+ * @param {integer} sessionLength, in seconds
+ * @param {Function} cb
+ */
+function startSession(sessionLength, cb) {
   var likeRecs = function likeRecs(err, recs) {
     if (err)
       cb(err, null);
@@ -46,6 +45,9 @@ function startSession(cb) {
   };
 
   tinder.getRecommendations(10, likeRecs);
+
+  // session variables.
+  var startTime = Date.now();
   var timer = setInterval(function() {
     var now = Date.now();
     if (now > startTime + (sessionLength * 100))
@@ -55,14 +57,7 @@ function startSession(cb) {
 };
 
 
-// test
-function test() {
-  console.log('it works!');
-}
-
-
 // Expose public methods
 module.exports = {
-  start: startSession,
-  test: test
+  start: startSession
 };
