@@ -22,7 +22,7 @@ tinder.setAuthToken(authToken);
  * @param {integer} sessionLength, in seconds
  * @param {Function} cb
  */
-function startSession(sessionLength, cb) {
+function start(sessionLength, cb) {
   var likeRecs = function likeRecs(err, recs) {
     if (err)
       cb(err, null);
@@ -59,5 +59,5 @@ function startSession(sessionLength, cb) {
 
 // Expose public methods
 module.exports = {
-  start: startSession
+  start: start
 };

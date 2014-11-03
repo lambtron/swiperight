@@ -19,7 +19,7 @@ new CronJob({
 function varyStartTime() {
   var variation = (Math.random() * startVariation);
   setTimeout(function() {
-    bot.startSession(sessionLength, function(err, data) {
+    bot.start(sessionLength, function(err, data) {
       if (err) console.log(err);
       console.log(data);
     });
