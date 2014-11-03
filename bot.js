@@ -1,6 +1,6 @@
 // top level libraries
-var authToken = '70929984-9889-4ec1-a7b6-4e6f5f242c5b';
-var Tinder = require('./node_modules/tinderjs/tinder.js').TinderClient;
+var authToken = '89142d91-269d-44aa-8b52-7e259a3a713a';
+var Tinder = require('./lib/tinderjs/tinder.js').TinderClient;
 var tinder = new Tinder();
 
 
