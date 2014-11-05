@@ -9,7 +9,7 @@ var startVariation = 3000;
 
 
 new CronJob({
-  cronTime: "13 9,11,16,20,22 * * *", // everyday, 9:13, 11:13, 4:13, 8:13,
+  cronTime: "13 9,11,16,20,22 * * *", // everyday, 9:13, 11:13, 4:13, 8:13, 10:13
   onTick: varyStartTime(),
   start: true,
   timeZone: "America/Los_Angeles"

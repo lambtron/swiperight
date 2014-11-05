@@ -24,8 +24,12 @@ var LIKEINTERVAL_STD = 0.7;
  * @param {Function} cb
  */
 function start(sessionLength, cb) {
-  tinder.authorize(fbToken, fbId, function() {
-    // Sets the token.
+  tinder.authorize(fbToken, fbId, function(err, data) {
+    if (err) {
+      console.log(err);
+      return;
+    }
+
     var likeRecs = function likeRecs(err, recs) {
       if (err)
         cb(err, null);
@@ -39,7 +43,7 @@ function start(sessionLength, cb) {
             tinder.like(id, function(err, data) {
               console.log(data);
             });
-            if (--i) like(i);      //  decrement i and call myLoop again if i > 0
+            if (--i) like(i);
           }, newInterval);
         })(recs.results.length);
       } else {
