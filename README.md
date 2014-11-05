@@ -12,6 +12,7 @@ Swipe right on Tinder through this bot.
 
 `fbId`: go [here](http://findmyfacebookid.com/) and paste the Facebook URL of your profile to retrieve your numeric ID. This will be your `fbId`.
 
+
 2. Now, clone this repo and deploy it to Heroku (or your hosting provider of choice, but for the remainder of this we'll use Heroku).
 
 ```
@@ -21,9 +22,11 @@ $ heroku create
 $ git push heroku master
 ```
 
+
 3. Go into your Heroku and edit the environment variables `FB_ID` and `FB_TOKEN`:
 
 ![Heroku app environmental variables](http://i.imgur.com/yqwdvyH.png)
+
 
 4. Get matches!
 
