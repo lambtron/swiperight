@@ -1,6 +1,10 @@
+if (!process.env.FB_ID)
+  require('./config');
+
+
 // top level libraries
-var fbId = '1227960057';
-var fbToken = 'CAAGm0PX4ZCpsBAHQg0mZCYRyteKlsHV06kiHqDgXu0ZApMZCjB3eijhixOOY5owYo586sPnpDqyVejzDMBIapZBCiZCiHgTgKV7qsLF0utnePOasnBaRj7bZAiRTejOLNx28RmmYTQpn7ZAy2BahtxJRi5S6GWXVXOIIlP7APIe0VatC5GrZCMmUzjX9j3QytZAvjFaZBrOnLpEpsVr65K4rfdqUEYZAIJnZBsxx60RINKGsHIAZDZD';
+var fbId = process.env.FB_ID || '';
+var fbToken = process.env.FB_TOKEN || '';
 var Tinder = require('./lib/tinderjs/tinder.js').TinderClient;
 var tinder = new Tinder();
 
@@ -61,5 +65,3 @@ function start(sessionLength, cb) {
 module.exports = {
   start: start
 };
-
-start(10, function() {});
