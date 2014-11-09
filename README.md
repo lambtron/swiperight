@@ -24,7 +24,13 @@ $ git push heroku master
 
 ![Heroku app environmental variables](http://i.imgur.com/yqwdvyH.png)
 
-4)  Get matches!
+4)  From the command line, increase clock worker to 1:
+
+```
+heroku ps:scale clock=1
+```
+
+5)  Get matches!
 
 
 ## How does it work?
