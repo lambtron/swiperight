@@ -35,9 +35,9 @@ heroku ps:scale clock=1
 
 ## How does it work?
 
-At various points throughout the day, `clock.js` schedules tasks for `bot.js`retrieves recommendations, of which all of them are liked. The cronjob in `clock.js` is set to initiate `varyStartTime()` (which will randomize when `bot.start()` is called) everyday at 9:13am, 11:13am, 4:13pm, 8:13pm, 10:13pm.
+At various points throughout the day, `clock.js` schedules tasks for `bot`, which retrieves recommendations, of which all of them are liked. The cronjob in `clock.js` is set to initiate `varyStartTime()` (which will randomize when `bot.like()` is called) everyday at 9:13am, 11:13am, 4:13pm, 8:13pm, 10:13pm.
 
-The `bot.start()` function will authorize as the Tinder app, retrieve recommendations, and like them as your Facebook profile.
+The `bot.like()` function will authorize as the Tinder app, retrieve recommendations, and like them as your Facebook profile.
 
 ## Make the bot more sophisticated
 
