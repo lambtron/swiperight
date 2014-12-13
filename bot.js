@@ -1,10 +1,7 @@
-if (!process.env.FB_ID)
-  require('./config');
-
 
 // top level libraries
-var fbId = process.env.FB_ID || '';
-var fbToken = process.env.FB_TOKEN || '';
+var fbId = process.env.FB_ID;
+var fbToken = process.env.FB_TOKEN;
 var Tinder = require('./lib/tinderjs/tinder.js').TinderClient;
 var tinder = new Tinder();
 
