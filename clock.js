@@ -1,12 +1,15 @@
 
+/**
+ * Module dependencies.
+ */
+
 var CronJob = require('cron').CronJob;
-var bot = require('./bot.js');
+var Tinder = require('./lib/index');
+var bot = new Tinder(process.env.FB_ID, process.env.FB_TOKEN);
 
-
-// variables are all in seconds
-var sessionLength = 60;
-var startVariation = 3000;
-
+/**
+ * Initiate Cronjob.
+ */
 
 new CronJob({
   cronTime: "13 9,11,16,20,22 * * *", // everyday, 9:13, 11:13, 4:13, 8:13, 10:13
@@ -15,13 +18,13 @@ new CronJob({
   timeZone: "America/Los_Angeles"
 });
 
+/**
+ * Kick off a liking spree.
+ */
 
 function varyStartTime() {
   var variation = (Math.random() * startVariation);
   setTimeout(function() {
-    bot.start(sessionLength, function(err, data) {
-      if (err) console.log(err);
-      console.log(data);
-    });
+    bot.start(100);
   }, variation * 100);
 }

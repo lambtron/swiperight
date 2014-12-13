@@ -1,12 +1,11 @@
 {
-  "name": "tinderbot",
+  "name": "Swiperight",
   "description": "Swipe right.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Andy Jiang",
-  "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lambtron/tinderbot"
+    "url": "https://github.com/lambtron/swiperight"
   },
   "engines": {
     "node": "0.11.14",
@@ -17,6 +16,6 @@
     "cron": "^1.0.5",
     "request": "^2.47.0",
     "time": "^0.11.0",
-    "tinderjs": "file:./lib/tinderjs"
+    "tinderjs": "1.0.8"
   }
 }
