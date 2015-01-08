@@ -23,8 +23,8 @@ new CronJob({
  */
 
 function varyStartTime() {
-  var variation = (Math.random() * startVariation);
+  var variation = (Math.random() * 60);
   setTimeout(function() {
-    bot.start(100);
+    bot.like(100);
   }, variation * 100);
 }
