@@ -32,6 +32,13 @@ heroku ps:scale clock=1
 
 5)  Get matches!
 
+## How to manually run without cronjob
+
+Like 100 from the command line:
+
+```
+$ node --harmony ./run.js
+```
 
 ## How does it work?
 
