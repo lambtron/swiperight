@@ -1,17 +1,26 @@
 {
   "name": "Swiperight",
-  "description": "Swipe right.",
+  "description": "Super simple tinder bot that you can run from the command line.",
   "version": "0.1.0",
   "author": "Andy Jiang",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/lambtron/swiperight"
   },
+  "keywords": [
+    "tinder",
+    "bot",
+    "swipe",
+    "right",
+    "dating"
+  ],
   "engines": {
     "node": "0.11.14",
     "npm": "1.1.x"
   },
-  "private": true,
+  "license": "MIT",
+  "homepage": "https://github.com/lambtron/swiperight",
   "dependencies": {
     "cron": "^1.0.5",
     "request": "^2.47.0",
